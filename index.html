@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1> Expense Tracker</h1>
+    <p>Manage your money, one day at a time.</p>
+  </header>
+
+  <main>
+    <section class="summary">
+      <article class="card">
+        <h3>Total Expenses</h3>
+        <p id="totalExpenses">¥0</p>
+      </article>
+      <article class="card">
+        <h3>This Month</h3>
+        <p id="monthlyExpenses">¥0</p>
+      </article>
+      <article class="card">
+        <h3>Transactions</h3>
+        <p id="transactionCount">0</p>
+      </article>
+
+    </section>
+    
+<section class="panel">
+  <h2>Monthly Expense Chart</h2>
+  <p>Compare your spending by category.</p>
+  <div class="chart-container">
+    <canvas id="expenseChart"></canvas>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js" defer></script>
+
+
+    <section class="panel">
+      <h2>Add New Expense</h2>
+      <form id="expenseForm">
+        <label for="description">Description</label>
+        <input id="description" type="text"
+          placeholder="e.g. Lunch" required maxlength="100">
+
+        <label for="amount">Amount (¥)</label>
+        <input id="amount" type="number"
+          placeholder="e.g. 800" min="1" step="1" required>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Education">Education</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="date">Date</label>
+        <input id="date" type="date" required>
+
+        <button type="submit">+ Add Expense</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Expense History</h2>
+      <label for="filterCategory">Filter by category</label>
+      <select id="filterCategory">
+        <option value="All">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Education">Education</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="expenseList"></tbody>
+        </table>
+      </div>
+      <p id="emptyMessage">No expenses yet. Add your first expense!</p>
+    </section>
+  </main>
+
+  <footer>Personal Expense Tracker | My First Finance Project</footer>
+</body>
+</html>

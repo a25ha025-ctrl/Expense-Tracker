@@ -1,0 +1,177 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0432;
+  color: #25213a;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    height: 260px;
+  }
+}
+
+
+header {
+  background: #847da3;
+  color: rgb(60, 3, 3);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1050px;
+  margin: 30px auto;
+  padding: 0 18px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card,
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #2920520d;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #77718b;
+  font-size: 15px;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: #292730;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd8ed;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #a99aff;
+  border-color: #180f3a;
+}
+
+button {
+  margin-top: 8px;
+  background: #180d46;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #3b3849;
+}
+
+#filterCategory {
+  max-width: 260px;
+  margin: 12px 0 18px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #eeeaf5;
+}
+
+th {
+  color: #77718b;
+  font-size: 13px;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 8px 10px;
+  margin: 0;
+  width: auto;
+}
+
+#emptyMessage {
+  color: #77718b;
+  text-align: center;
+  padding: 15px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #77718b;
+}
+
+@media (max-width: 650px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+}
