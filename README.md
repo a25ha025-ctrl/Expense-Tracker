@@ -4,7 +4,7 @@ A simple web application to record daily expenses and manage monthly spending.
 
 ## 🌐 Live Demo
 
-👉 [Visit My Personal Expense Tracker Website](https://a25ha025-ctrl.github.io/Personal-Expense-Tracker/)
+👉 [Visit My Personal Expense Tracker Website]( https://a25ha025-ctrl.github.io/Expense-Tracker/)
 
 ## ✨ Features
 
